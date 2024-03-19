@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pijar Food</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+
+      /* .navbar, .profile, .profile-date-like, .date-like, .search, .filter, .photo, .pagination, .footer, .card-body, img, aside, .title, .Ingredients, .line, .commentator, .comment-text, form{
+        background-color:aqua;
+        border: 1px solid red;
+      } */
+      body{
+        font-family: poppins;
+      }
+      .nav-item{
+        margin-right: 50px;
+      }
+      .form-control {
+        background-color: rgb(250, 250, 250);
+        padding: 20px;
+      }
+      .form-control::placeholder {
+        color: rgba(0, 0, 0, 0.349);
+        vertical-align: top;
+      }
+      .form-control:focus{
+        background-color: rgb(250, 250, 250);
+        border-color: #EFC81A;
+        box-shadow: 0 0 0 0.2rem rgba(239,200,26, 0.5);
+      }
+      .upload-container {
+        border: 2px dashed #ccc;
+        padding: 20px;
+        background-color: rgb(250, 250, 250);
+        cursor: pointer;
+        height: 300px;
+      }
+
+      .upload-container:hover {
+        background-color: #f9f9f9;
+      }
+
+      .upload-container input[type="file"] {
+        display: none;
+      }
+
+      .upload-container img {
+        max-width: 100px;
+        max-height: 100px;
+      }
+  </style>
+</head>
+<body>
+  <!-- navbar -->
+	<nav class="navbar navbar-expand-lg container p-2 mt-4">
+    <!-- Home, add recipe, search -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="font-size: 15px;">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="search-menu.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  style="text-decoration-line: underline;" href="#">Add Recipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="detail-profile-recipes.html">Search Menu</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Profile & Logout-->
+    <div class="profile d-flex flex-row align-items-center">
+      <div class="box" style="width: 5px; height: 50px; background-color:#EFC81A; margin-right: 20px;"></div>
+      <a href="detail-profile.html">
+        <img src="/public/ayudia-photo.png" style="border: 200px; border-radius: 100%; height: 40px; padding: 1.5px; margin-right: 15px;" class="" alt="...">
+      </a>
+      <div class="d-flex flex-column" style="font-size: small; margin-right: 10px; text-align: left;">
+        <div class="">Ayudia</div>
+        <a href="login.html" class="text-black" style="font-weight: 600; text-decoration: none;">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+	<!-- Content -->
+  <div class="content container d-flex flex-column" style="margin-top: 50px; margin-bottom: 100px;">
+    <!-- body content -->
+    <section class="row">
+      <!-- Input Recipe -->
+      <form action="" class="d-flex flex-column mt-4 mb-4">
+        <!-- Photo -->
+        <label for="uploadPhoto" class="form-label" style="font-weight: 500; font-size: 20px;">Photo</label>
+        <div class="d-flex flex-column mb-4">
+          <div class="upload-container d-flex flex-column align-items-center justify-content-center">
+            <span style="color: #ccc;">Drag & Drop or Click Here to Upload</span>
+            <!-- <input type="file" id="fileInput" class="form-control" id="formFile" placeholder="Add Photo"> -->
+          </div>
+        </div>
+        
+        <!-- Title -->
+        <label for="title" class="form-label" style="font-weight: 500; font-size: 20px;">Title</label>
+        <div class="d-flex flex-column mb-4">
+          <input type="text" class="form-control" id="textComment" placeholder="Title" rows="1"></input>
+        </div>
+
+        <!-- Ingredients -->
+        <label for="ingredients" class="form-label" style="font-weight: 500; font-size: 20px;">Ingredients</label>
+        <div class="d-flex flex-column mb-4">
+          <textarea type="text" class="form-control" id="textComment" placeholder="Ingredients" rows="10"></textarea>
+        </div>
+        
+        <!-- Category -->
+        <div class="d-flex flex-column mb-4 col-4">
+          <label for="category" class="form-label" style="font-weight: 500; font-size: 20px;">Category</label>
+          <select class="form-select" aria-label="category" style="padding: 15px;">
+            <option selected>Select category</option>
+            <option value="1">Desert</option>
+            <option value="2">Main Course</option>
+            <option value="3">Appetizer</option>
+          </select>
+        </div>
+
+        <!-- Post Button-->
+        <div class="d-flex flex-column align-items-center mt-5">
+          <button type="submit" class="btn-submit btn text-white" style="padding: 10px 150px; font-size: 17px; background-color: #EFC81A;">Post</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-5" style="background-color: #EFC81A;">
+    <div class="d-flex flex-column justify-content-center align-items-center" style="padding: 75px; padding-top: 150px;">
+      <p style="font-size: 55px;">Eat, Cook, Repeat</p>
+      <p class="mt-4" style="color: #707070;">Share your best recipe by uploading here!</p>
+    </div>
+    <div class="d-flex flex-row justify-content-center text-align-center p-5" style="background-color: #EFC81A;">
+      <a href="" style="padding: 10px; text-decoration: none; color: #707070;">Product</a>
+      <a href="" style="padding: 10px; text-decoration: none; color: #707070;">Company</a>
+      <a href="" style="padding: 10px; text-decoration: none; color: #707070;">Learn more</a>
+      <a href="" style="padding: 10px; text-decoration: none; color: #707070;">Get in touch</a>
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center" style="padding-bottom: 30px;">
+      <p>&copy Pijar Camp</p>
+    </div>
+  </footer>
+</body>
+</html>

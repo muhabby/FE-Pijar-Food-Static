@@ -1,186 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pijar Food</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
-<body class="detail-menu">
-  <!-- navbar -->
-	<nav class="navbar navbar-expand-lg container p-2 mt-4">
-    <!-- Home, add recipe, search -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="font-size: 15px;">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="search-menu.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="add-menu.html">Add Recipe</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="detail-profile-recipes.html">Search Menu</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Profile & Logout-->
-    <div class="profile d-flex flex-row align-items-center">
-      <div class="box" style="width: 5px; height: 50px; background-color:#EFC81A; margin-right: 20px;"></div>
-      <a href="detail-profile.html">
-        <img src="ayudia-photo.png" style="border: 200px; border-radius: 100%; height: 40px; padding: 1.5px; margin-right: 15px;" class="" alt="...">
-      </a>
-      <div class="d-flex flex-column" style="font-size: small; margin-right: 10px; text-align: left;">
-        <div class="">Ayudia</div>
-        <a href="login.html" class="text-black" style="font-weight: 600; text-decoration: none;">Logout</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pijar Food</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body class="detail-menu">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg container p-2 mt-4">
+      <!-- Home, add recipe, search -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse"
+        id="navbarNavDropdown"
+        style="font-size: 15px"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="search-menu.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="add-menu.html">Add Recipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="detail-profile-recipes.html"
+              >Search Menu</a
+            >
+          </li>
+        </ul>
       </div>
-    </div>
-  </nav>
 
-	<!-- Content -->
-  <div class="content container d-flex flex-column" style="margin-top: 25px; margin-bottom: 100px;">
-    <!-- Profile, date, like -->
-    <div class="profile-date-like row mt-5 mb-4 p-2">
-      <div class="profile col-6 d-flex flex-row align-items-center">
-        <div class="box" style="width: 5px; height: 50px; background-color:#EFC81A; margin-right: 20px;"></div>
-        <img src="ayudia-photo.png" style="border: 200px; border-radius: 100%; height: 40px; padding: 1.5px; margin-right: 15px;" alt="...">
-        <div class="d-flex flex-column align-items-start" style="font-size: small; margin-right: 10px;">
-          <span class="mb-1">Ayudia</span>
-          <span style="font-weight: 600;">10 Recipe</span>
+      <!-- Profile & Logout-->
+      <div class="profile d-flex flex-row align-items-center">
+        <div
+          class="box"
+          style="
+            width: 5px;
+            height: 50px;
+            background-color: #efc81a;
+            margin-right: 20px;
+          "
+        ></div>
+        <a href="detail-profile.html">
+          <img
+            src="ayudia-photo.png"
+            style="
+              border: 200px;
+              border-radius: 100%;
+              height: 40px;
+              padding: 1.5px;
+              margin-right: 15px;
+            "
+            class=""
+            alt="..."
+          />
+        </a>
+        <div
+          class="d-flex flex-column"
+          style="font-size: small; margin-right: 10px; text-align: left"
+        >
+          <div class="">Ayudia</div>
+          <a
+            href="login.html"
+            class="text-black"
+            style="font-weight: 600; text-decoration: none"
+            >Logout</a
+          >
         </div>
       </div>
-      <div class="date-like col-6 d-flex flex-column justify-content-center">
-        <div class="d-flex flex-column align-items-end" style="font-size: small;">
-          <span class="mb-1">21 February 2023</span>
-          <div class="d-flex flex-row">
-            <span>20 Likes</span>
-            <span class="mx-2"> - </span>
-            <span>2 Comments</span>
+    </nav>
+
+    <!-- Content -->
+    <div
+      class="content container d-flex flex-column"
+      style="margin-top: 25px; margin-bottom: 100px"
+    >
+      <!-- Profile, date, like -->
+      <div class="profile-date-like row mt-5 mb-4 p-2">
+        <div class="profile col-6 d-flex flex-row align-items-center">
+          <div
+            class="box"
+            style="
+              width: 5px;
+              height: 50px;
+              background-color: #efc81a;
+              margin-right: 20px;
+            "
+          ></div>
+          <img
+            src="ayudia-photo.png"
+            style="
+              border: 200px;
+              border-radius: 100%;
+              height: 40px;
+              padding: 1.5px;
+              margin-right: 15px;
+            "
+            alt="..."
+          />
+          <div
+            class="d-flex flex-column align-items-start"
+            style="font-size: small; margin-right: 10px"
+          >
+            <span class="mb-1">Ayudia</span>
+            <span style="font-weight: 600">10 Recipe</span>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- body content -->
-    <section class="row">
-      <!-- Title -->
-      <div class="title d-flex flex-row justify-content-center mt-4 mb-4">
-        <span style="font-size: 50px;">Egg Sandwich</span>
-      </div>
-
-      <!-- Recipe picture-->
-      <div class="photo d-flex flex-column align-items-center mt-4 mb-4">
-        <img src="egg-sandwich-picture.png" class="img-fluid" alt="..." style="max-width: 700px;">
-      </div>
-
-      <!-- Description recipe -->
-      <div class="Ingredients d-flex flex-column mt-4 mb-4 ">
-        <span style="font-size: 40px; margin-bottom: 20px;">Ingredients</span>
-        <span style="font-size: 20px;">- 2 eggs <br>
-          - 2 tbsp mayonnaise <br>
-          - 3 slices bread <br>
-          - a little butter <br>
-          - ⅓ carton of cress <br>
-          - 2-3 slices of tomato or a lettuce leaf
-          and a slice of ham or cheese<br>
-          - crisps, to serve
-        </span>
-      </div>
-
-      <!-- Bookmark & like -->
-      <div class="filter d-flex flex-column mt-3 mb-3">
-        <div class="d-flex flex-row" role="group">
-          <button id="bookmarkBtn" class="btn toggle-btn active"><i class="fas fa-bookmark"></i></button>
-          <button id="likeBtn" class="btn toggle-btn"><i class="fas fa-thumbs-up"></i></button>
-          <script>
-            const bookmarkBtn = document.getElementById('bookmarkBtn');
-            const likeBtn = document.getElementById('likeBtn');
-
-            bookmarkBtn.addEventListener('click', function() {
-              this.classList.toggle('active');
-            });
-            likeBtn.addEventListener('click', function() {
-              this.classList.toggle('active');
-            });
-          </script>
-        </div>
-      </div>
-
-      <!-- Line -->
-      <div class="line d-flex mt-4 mb-4">
-        <div class="box" style="background-color: #EFC81A; height: 7px; width: 100%;">
-        </div>
-      </div>
-
-      <!-- Commentator -->
-      <div class="commentator d-flex flex-column mt-3 mb-3">
-        <div class="d-flex flex-row mt-4 mb-4">
-          <div class="profile col-2 d-flex flex-row align-items-center">
-            <img src="ayudia-photo.png" style="border: 200px; border-radius: 100%; height: 40px; padding: 1.5px; margin-right: 15px;" alt="...">
-            <div class="d-flex flex-column align-items-start" style="font-size: small; margin-right: 10px;">
-              <span class="mb-1">Karen</span>
-              <span style="font-weight: 600;">20 Recipe</span>
+        <div class="date-like col-6 d-flex flex-column justify-content-center">
+          <div
+            class="d-flex flex-column align-items-end"
+            style="font-size: small"
+          >
+            <span class="mb-1">21 February 2023</span>
+            <div class="d-flex flex-row">
+              <span>20 Likes</span>
+              <span class="mx-2"> - </span>
+              <span>2 Comments</span>
             </div>
-            <div class="box" style="width: 5px; height: 50px; background-color:#EFC81A; margin-left: 20px;"></div>
-          </div>
-          <div class="comment-text col d-flex flex-column justify-content-center text-align-center">
-            <span style="font-size: small;">Wow, I just made this and it was delicious! Thanks for sharing!</span>
           </div>
         </div>
-        <div class="d-flex flex-row mt-4 mb-4">
-          <div class="profile col-2 d-flex flex-row align-items-center">
-            <img src="ayudia-photo.png" style="border: 200px; border-radius: 100%; height: 40px; padding: 1.5px; margin-right: 15px;" alt="...">
-            <div class="d-flex flex-column align-items-start" style="font-size: small; margin-right: 10px;">
-              <span class="mb-1">Ariel</span>
-              <span style="font-weight: 600;">20 Recipe</span>
+      </div>
+
+      <!-- body content -->
+      <section class="row">
+        <!-- Title -->
+        <div class="title d-flex flex-row justify-content-center mt-4 mb-4">
+          <span style="font-size: 50px">Egg Sandwich</span>
+        </div>
+
+        <!-- Recipe picture-->
+        <div class="photo d-flex flex-column align-items-center mt-4 mb-4">
+          <img
+            src="egg-sandwich-picture.png"
+            class="img-fluid"
+            alt="..."
+            style="max-width: 700px"
+          />
+        </div>
+
+        <!-- Description recipe -->
+        <div class="Ingredients d-flex flex-column mt-4 mb-4">
+          <span style="font-size: 40px; margin-bottom: 20px">Ingredients</span>
+          <span style="font-size: 20px"
+            >- 2 eggs <br />
+            - 2 tbsp mayonnaise <br />
+            - 3 slices bread <br />
+            - a little butter <br />
+            - ⅓ carton of cress <br />
+            - 2-3 slices of tomato or a lettuce leaf and a slice of ham or
+            cheese<br />
+            - crisps, to serve
+          </span>
+        </div>
+
+        <!-- Bookmark & like -->
+        <div class="filter d-flex flex-column mt-3 mb-3">
+          <div class="d-flex flex-row" role="group">
+            <button id="bookmarkBtn" class="btn toggle-btn active">
+              <i class="fas fa-bookmark"></i>
+            </button>
+            <button id="likeBtn" class="btn toggle-btn">
+              <i class="fas fa-thumbs-up"></i>
+            </button>
+            <script>
+              const bookmarkBtn = document.getElementById("bookmarkBtn");
+              const likeBtn = document.getElementById("likeBtn");
+
+              bookmarkBtn.addEventListener("click", function () {
+                this.classList.toggle("active");
+              });
+              likeBtn.addEventListener("click", function () {
+                this.classList.toggle("active");
+              });
+            </script>
+          </div>
+        </div>
+
+        <!-- Line -->
+        <div class="line d-flex mt-4 mb-4">
+          <div
+            class="box"
+            style="background-color: #efc81a; height: 7px; width: 100%"
+          ></div>
+        </div>
+
+        <!-- Commentator -->
+        <div class="commentator d-flex flex-column mt-3 mb-3">
+          <div class="d-flex flex-row mt-4 mb-4">
+            <div class="profile col-2 d-flex flex-row align-items-center">
+              <img
+                src="ayudia-photo.png"
+                style="
+                  border: 200px;
+                  border-radius: 100%;
+                  height: 40px;
+                  padding: 1.5px;
+                  margin-right: 15px;
+                "
+                alt="..."
+              />
+              <div
+                class="d-flex flex-column align-items-start"
+                style="font-size: small; margin-right: 10px"
+              >
+                <span class="mb-1">Karen</span>
+                <span style="font-weight: 600">20 Recipe</span>
+              </div>
+              <div
+                class="box"
+                style="
+                  width: 5px;
+                  height: 50px;
+                  background-color: #efc81a;
+                  margin-left: 20px;
+                "
+              ></div>
             </div>
-            <div class="box" style="width: 5px; height: 50px; background-color:#EFC81A; margin-left: 20px;"></div>
+            <div
+              class="comment-text col d-flex flex-column justify-content-center text-align-center"
+            >
+              <span style="font-size: small"
+                >Wow, I just made this and it was delicious! Thanks for
+                sharing!</span
+              >
+            </div>
           </div>
-          <div class="comment-text col d-flex flex-column justify-content-center text-align-center">
-            <span style="font-size: small;">So simple and delicious!</span>
+          <div class="d-flex flex-row mt-4 mb-4">
+            <div class="profile col-2 d-flex flex-row align-items-center">
+              <img
+                src="ayudia-photo.png"
+                style="
+                  border: 200px;
+                  border-radius: 100%;
+                  height: 40px;
+                  padding: 1.5px;
+                  margin-right: 15px;
+                "
+                alt="..."
+              />
+              <div
+                class="d-flex flex-column align-items-start"
+                style="font-size: small; margin-right: 10px"
+              >
+                <span class="mb-1">Ariel</span>
+                <span style="font-weight: 600">20 Recipe</span>
+              </div>
+              <div
+                class="box"
+                style="
+                  width: 5px;
+                  height: 50px;
+                  background-color: #efc81a;
+                  margin-left: 20px;
+                "
+              ></div>
+            </div>
+            <div
+              class="comment-text col d-flex flex-column justify-content-center text-align-center"
+            >
+              <span style="font-size: small">So simple and delicious!</span>
+            </div>
           </div>
         </div>
+
+        <!-- Line -->
+        <div class="line d-flex mt-4 mb-4">
+          <div
+            class="box"
+            style="background-color: #efc81a; height: 7px; width: 100%"
+          ></div>
+        </div>
+
+        <!-- Input Comment -->
+        <form action="" class="d-flex flex-column col-6 mt-4 mb-4">
+          <div class="d-flex flex-column mb-4">
+            <textarea
+              type="text"
+              class="form-control"
+              id="textComment"
+              placeholder="Your comment here!"
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="d-flex flex-column col-6">
+            <button
+              type="submit"
+              class="btn-submit btn text-white p-2"
+              style="font-size: 15px; background-color: #ffb167"
+            >
+              Send a comment
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="background-color: #efc81a">
+      <div
+        class="d-flex flex-column justify-content-center align-items-center"
+        style="padding: 75px; padding-top: 150px"
+      >
+        <p style="font-size: 55px">Eat, Cook, Repeat</p>
+        <p class="mt-4" style="color: #707070">
+          Share your best recipe by uploading here!
+        </p>
       </div>
-
-      <!-- Line -->
-      <div class="line d-flex mt-4 mb-4">
-        <div class="box" style="background-color: #EFC81A; height: 7px; width: 100%;">
-        </div>
+      <div
+        class="d-flex flex-row justify-content-center text-align-center p-5"
+        style="background-color: #efc81a"
+      >
+        <a href="" style="padding: 10px; text-decoration: none; color: #707070"
+          >Product</a
+        >
+        <a href="" style="padding: 10px; text-decoration: none; color: #707070"
+          >Company</a
+        >
+        <a href="" style="padding: 10px; text-decoration: none; color: #707070"
+          >Learn more</a
+        >
+        <a href="" style="padding: 10px; text-decoration: none; color: #707070"
+          >Get in touch</a
+        >
       </div>
-
-      <!-- Input Comment -->
-      <form action="" class="d-flex flex-column col-6 mt-4 mb-4">
-        <div class="d-flex flex-column mb-4">
-          <textarea type="text" class="form-control" id="textComment" placeholder="Your comment here!" rows="5"></textarea>
-        </div>
-        <div class="d-flex flex-column col-6">
-          <button type="submit" class="btn-submit btn text-white p-2" style="font-size: 15px; background-color: #FFB167;">Send a comment</button>
-        </div>
-      </form>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer" style="background-color: #EFC81A;">
-    <div class="d-flex flex-column justify-content-center align-items-center" style="padding: 75px; padding-top: 150px;">
-      <p style="font-size: 55px;">Eat, Cook, Repeat</p>
-      <p class="mt-4" style="color: #707070;">Share your best recipe by uploading here!</p>
-    </div>
-    <div class="d-flex flex-row justify-content-center text-align-center p-5" style="background-color: #EFC81A;">
-      <a href="" style="padding: 10px; text-decoration: none; color: #707070;">Product</a>
-      <a href="" style="padding: 10px; text-decoration: none; color: #707070;">Company</a>
-      <a href="" style="padding: 10px; text-decoration: none; color: #707070;">Learn more</a>
-      <a href="" style="padding: 10px; text-decoration: none; color: #707070;">Get in touch</a>
-    </div>
-    <div class="d-flex flex-column justify-content-center align-items-center" style="padding-bottom: 30px;">
-      <p>&copy Pijar Camp</p>
-    </div>
-  </footer>
-</body>
+      <div
+        class="d-flex flex-column justify-content-center align-items-center"
+        style="padding-bottom: 30px"
+      >
+        <p>&copy Pijar Camp</p>
+      </div>
+    </footer>
+  </body>
 </html>

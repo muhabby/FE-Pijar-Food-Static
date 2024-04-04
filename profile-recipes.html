@@ -17,7 +17,7 @@
     ></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
-  <body class="search-menu">
+  <body class="detail-profile-recipes">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg container p-2 mt-4">
       <!-- Home, add recipe, search -->
@@ -39,19 +39,17 @@
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="#"
-              style="text-decoration-line: underline"
-              >Home</a
-            >
+            <a class="nav-link active" href="search-menu.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="add-menu.html">Add Recipe</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="detail-profile-recipes.html"
+            <a
+              class="nav-link active"
+              href="detail-profile-recipes.html"
+              aria-current="page"
+              style="text-decoration-line: underline"
               >Search Menu</a
             >
           </li>
@@ -102,82 +100,64 @@
 
     <!-- Content -->
     <div class="content container d-flex flex-column">
-      <!-- Title -->
-      <div class="title row p-1 mt-5 mb-2">
-        <p style="font-size: 50px">
-          Discover Recipe <br />
-          & Delicious Food
-        </p>
+      <!-- Profile, date, like -->
+      <div class="profile-date-like row mt-5 mb-4 p-2">
+        <div class="profile col-6 d-flex flex-row align-items-center">
+          <div
+            class="box"
+            style="
+              width: 5px;
+              height: 50px;
+              background-color: #efc81a;
+              margin-right: 20px;
+            "
+          ></div>
+          <img
+            src="ayudia-photo.png"
+            style="
+              border: 200px;
+              border-radius: 100%;
+              height: 40px;
+              padding: 1.5px;
+              margin-right: 15px;
+            "
+            alt="..."
+          />
+          <div
+            class="d-flex flex-column align-items-start"
+            style="font-size: small; margin-right: 10px"
+          >
+            <span class="mb-1">Ayudia</span>
+            <span style="font-weight: 600">10 Recipe</span>
+          </div>
+        </div>
+        <div class="date-like col-6 d-flex flex-column justify-content-center">
+          <div
+            class="d-flex flex-column align-items-end"
+            style="font-size: small"
+          >
+            <span class="mb-1">21 February 2023</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Search -->
-      <form class="search row p-1 mt-4 mb-4">
-        <div class="col-5">
-          <input
-            type="text"
-            class="form-control"
-            id="search"
-            placeholder="Telur Gulung"
-            style="padding: 10px; padding-left: 30px"
-          />
+      <!-- Recipes, Bookmarked, Liked-->
+      <div
+        class="recipe-bookmarked-liked d-flex flex-column col-4 mt-4 mb-4 p-2"
+      >
+        <div class="d-flex flex-row justify-content-between">
+          <a class="list-item active" aria-current="recipes" href="#"
+            >Recipes</a
+          >
+          <a class="list-item" href="detail-profile-bookmarked.html"
+            >Bookmarked</a
+          >
+          <a class="list-item" href="#">Liked</a>
         </div>
-        <div class="col">
-          <button
-            type="submit"
-            class="btn btn-md text-white"
-            style="
-              background-color: #efc81a;
-              padding: 10px;
-              padding-left: 30px;
-              padding-right: 30px;
-            "
-          >
-            Search
-          </button>
-        </div>
-      </form>
-
-      <!-- Filter -->
-      <div class="filter row p-1 mt-4 mb-4">
-        <div class="d-flex flex-row" role="group">
-          <input
-            type="checkbox"
-            id="toggleBtn1"
-            class="toggle-checkbox visually-hidden"
-          />
-          <label for="toggleBtn1" class="btn toggle-btn toggle-label"
-            >New</label
-          >
-
-          <input
-            type="checkbox"
-            id="toggleBtn2"
-            class="toggle-checkbox visually-hidden"
-          />
-          <label for="toggleBtn2" class="btn toggle-btn toggle-label"
-            >Populer</label
-          >
-
-          <input
-            type="checkbox"
-            id="toggleBtn3"
-            class="toggle-checkbox visually-hidden"
-            checked
-          />
-          <label for="toggleBtn3" class="btn toggle-btn toggle-label"
-            >Vegetarian</label
-          >
-
-          <input
-            type="checkbox"
-            id="toggleBtn4"
-            class="toggle-checkbox visually-hidden"
-            checked
-          />
-          <label for="toggleBtn4" class="btn toggle-btn toggle-label"
-            >Breakfast</label
-          >
-        </div>
+        <div
+          class="box mt-3"
+          style="background-color: #efc81a; height: 5px; width: 100%"
+        ></div>
       </div>
 
       <!-- body content -->
@@ -185,66 +165,55 @@
         <section class="col-8">
           <!-- Card Recipe-->
           <div class="card-recipe mt-4 mb-4">
-            <div class="d-flex flex-row" style="border-color: transparent">
+            <div
+              class="card d-flex flex-row"
+              style="background-color: transparent; border-color: transparent"
+            >
               <div class="d-flex flex-row align-items-center">
-                <div
-                  class="col-6"
-                  style="
-                    margin-right: 20px;
-                    height: 360px;
-                    width: 360px;
-                    background: #efc81a;
-                    border-radius: 15px;
-                    background-image: url(recipe-picture.png);
-                    background-position: center;
-                    background-size: cover;
-                  "
-                >
-                  <!-- <img src="recipe-picture.png" class="img-fluid" alt="..."> -->
+                <div class="col-6" style="margin-right: 20px; max-width: 360px">
+                  <img src="recipe-picture.png" class="img-fluid" alt="..." />
                 </div>
                 <div class="col-6">
                   <div
                     class="card-body d-flex flex-column"
                     style="margin: 10px"
                   >
-                    <a
-                      href="detail-menu.html"
-                      class="card-title mb-3"
-                      style="text-decoration: none; color: black"
+                    <span class="card-title mb-3" style="font-size: 35px"
+                      >Bomb <br />Chicken</span
                     >
-                      <span style="font-size: 35px">Bomb <br />Chicken</span>
-                    </a>
                     <span class="card-text mb-4" style="font-size: 18px"
                       >Ingredients: <br />
                       chicken, dumpling wrap, garlic, spring onion, soy sauce,
                       black sesame seed.</span
                     >
-                    <div class="like-comment-bookmark mb-4">
+                    <div class="like-comment-bookmark mb-3">
                       <span>10 Likes - 12 Comments - 3 Bookmarks</span>
                     </div>
-                    <div class="d-flex flex-row align-items-center">
-                      <img
-                        src="karen-photo.png"
+                    <div class="d-flex flex-row justify-content-between">
+                      <form action="edit-menu.html">
+                        <button
+                          type="submit"
+                          class="btn text-white"
+                          style="
+                            font-size: 14px;
+                            background-color: #30c0f3;
+                            padding: 10px 40px;
+                          "
+                        >
+                          Edit Menu
+                        </button>
+                      </form>
+                      <button
+                        type="submit"
+                        class="btn text-white"
                         style="
-                          border: 200px;
-                          border-radius: 100%;
-                          height: 40px;
-                          padding: 1.5px;
-                          margin-right: 15px;
-                        "
-                        class=""
-                        alt="..."
-                      />
-                      <div
-                        class="d-flex flex-column"
-                        style="
-                          font-size: 15px;
-                          margin-right: 10px;
-                          text-align: left;
+                          font-size: 14px;
+                          background-color: #f57e71;
+                          padding: 10px 30px;
                         "
                       >
-                        <div class="">Karen</div>
-                      </div>
+                        Delete Menu
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -275,32 +244,32 @@
                       chicken, dumpling wrap, garlic, spring onion, soy sauce,
                       black sesame seed.</span
                     >
-                    <div class="like-comment-bookmark mb-4">
+                    <div class="like-comment-bookmark mb-3">
                       <span>10 Likes - 12 Comments - 3 Bookmarks</span>
                     </div>
-                    <div class="d-flex flex-row align-items-center">
-                      <img
-                        src="karen-photo.png"
+                    <div class="d-flex flex-row justify-content-between">
+                      <button
+                        type="submit"
+                        class="btn text-white"
                         style="
-                          border: 200px;
-                          border-radius: 100%;
-                          height: 40px;
-                          padding: 1.5px;
-                          margin-right: 15px;
-                        "
-                        class=""
-                        alt="..."
-                      />
-                      <div
-                        class="d-flex flex-column"
-                        style="
-                          font-size: 15px;
-                          margin-right: 10px;
-                          text-align: left;
+                          font-size: 14px;
+                          background-color: #30c0f3;
+                          padding: 10px 40px;
                         "
                       >
-                        <div class="">Karen</div>
-                      </div>
+                        Edit Menu
+                      </button>
+                      <button
+                        type="submit"
+                        class="btn text-white"
+                        style="
+                          font-size: 14px;
+                          background-color: #f57e71;
+                          padding: 10px 30px;
+                        "
+                      >
+                        Delete Menu
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -331,32 +300,32 @@
                       chicken, dumpling wrap, garlic, spring onion, soy sauce,
                       black sesame seed.</span
                     >
-                    <div class="like-comment-bookmark mb-4">
+                    <div class="like-comment-bookmark mb-3">
                       <span>10 Likes - 12 Comments - 3 Bookmarks</span>
                     </div>
-                    <div class="d-flex flex-row align-items-center">
-                      <img
-                        src="karen-photo.png"
+                    <div class="d-flex flex-row justify-content-between">
+                      <button
+                        type="submit"
+                        class="btn text-white"
                         style="
-                          border: 200px;
-                          border-radius: 100%;
-                          height: 40px;
-                          padding: 1.5px;
-                          margin-right: 15px;
-                        "
-                        class=""
-                        alt="..."
-                      />
-                      <div
-                        class="d-flex flex-column"
-                        style="
-                          font-size: 15px;
-                          margin-right: 10px;
-                          text-align: left;
+                          font-size: 14px;
+                          background-color: #30c0f3;
+                          padding: 10px 40px;
                         "
                       >
-                        <div class="">Karen</div>
-                      </div>
+                        Edit Menu
+                      </button>
+                      <button
+                        type="submit"
+                        class="btn text-white"
+                        style="
+                          font-size: 14px;
+                          background-color: #f57e71;
+                          padding: 10px 30px;
+                        "
+                      >
+                        Delete Menu
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -387,32 +356,32 @@
                       chicken, dumpling wrap, garlic, spring onion, soy sauce,
                       black sesame seed.</span
                     >
-                    <div class="like-comment-bookmark mb-4">
+                    <div class="like-comment-bookmark mb-3">
                       <span>10 Likes - 12 Comments - 3 Bookmarks</span>
                     </div>
-                    <div class="d-flex flex-row align-items-center">
-                      <img
-                        src="karen-photo.png"
+                    <div class="d-flex flex-row justify-content-between">
+                      <button
+                        type="submit"
+                        class="btn text-white"
                         style="
-                          border: 200px;
-                          border-radius: 100%;
-                          height: 40px;
-                          padding: 1.5px;
-                          margin-right: 15px;
-                        "
-                        class=""
-                        alt="..."
-                      />
-                      <div
-                        class="d-flex flex-column"
-                        style="
-                          font-size: 15px;
-                          margin-right: 10px;
-                          text-align: left;
+                          font-size: 14px;
+                          background-color: #30c0f3;
+                          padding: 10px 40px;
                         "
                       >
-                        <div class="">Karen</div>
-                      </div>
+                        Edit Menu
+                      </button>
+                      <button
+                        type="submit"
+                        class="btn text-white"
+                        style="
+                          font-size: 14px;
+                          background-color: #f57e71;
+                          padding: 10px 30px;
+                        "
+                      >
+                        Delete Menu
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -443,32 +412,32 @@
                       chicken, dumpling wrap, garlic, spring onion, soy sauce,
                       black sesame seed.</span
                     >
-                    <div class="like-comment-bookmark mb-4">
+                    <div class="like-comment-bookmark mb-3">
                       <span>10 Likes - 12 Comments - 3 Bookmarks</span>
                     </div>
-                    <div class="d-flex flex-row align-items-center">
-                      <img
-                        src="karen-photo.png"
+                    <div class="d-flex flex-row justify-content-between">
+                      <button
+                        type="submit"
+                        class="btn text-white"
                         style="
-                          border: 200px;
-                          border-radius: 100%;
-                          height: 40px;
-                          padding: 1.5px;
-                          margin-right: 15px;
-                        "
-                        class=""
-                        alt="..."
-                      />
-                      <div
-                        class="d-flex flex-column"
-                        style="
-                          font-size: 15px;
-                          margin-right: 10px;
-                          text-align: left;
+                          font-size: 14px;
+                          background-color: #30c0f3;
+                          padding: 10px 40px;
                         "
                       >
-                        <div class="">Karen</div>
-                      </div>
+                        Edit Menu
+                      </button>
+                      <button
+                        type="submit"
+                        class="btn text-white"
+                        style="
+                          font-size: 14px;
+                          background-color: #f57e71;
+                          padding: 10px 30px;
+                        "
+                      >
+                        Delete Menu
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -476,21 +445,6 @@
             </div>
           </div>
         </section>
-
-        <!-- Decoration -->
-        <aside
-          class="col-4 d-flex flex-column align-items-end justify-content-between"
-          style="padding: 20px 0px"
-        >
-          <div
-            class="box"
-            style="height: 800px; width: 40px; background-color: #efc81a"
-          ></div>
-          <div
-            class="box"
-            style="height: 800px; width: 40px; background-color: #efc81a"
-          ></div>
-        </aside>
       </div>
     </div>
 
@@ -501,7 +455,6 @@
         style="padding: 75px"
       >
         <div class="d-flex flex-row align-items-center">
-          <span style="margin-right: 30px">Show 1 - 5 from 20</span>
           <button
             type="submit"
             class="btn text-white"
@@ -513,8 +466,9 @@
               padding-right: 20px;
             "
           >
-            Next
+            Prev
           </button>
+          <span style="margin-left: 30px">Show 6 - 10 from 10</span>
         </div>
       </div>
     </div>

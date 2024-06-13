@@ -1,7 +1,5 @@
 <div id="top"></div>
 
-<!-- PROJECT LOGO -->
-
 <div align="center">
   <h3 align="center">Pijar Food Website Static</h3>
   
@@ -17,8 +15,6 @@
     <a href="https://github.com/muhabby/FE-Pijar-Food-Static/issues">Feature Request</a>
   </p>
 </div>
-
-<!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
 
@@ -44,8 +40,6 @@
 Developers know that the app is still under development so many features need improvement to enhance the user experience. These improvements include making the site more responsive, adding transitions between pages, and implementing HTML5 semantic elements. The project will continue to receive regular updates to address these needs and improve the overall user experience.
 
 ### Built With
-
-This app was built with some technologies below:
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -101,9 +95,9 @@ Contributions that make the open source community the best place to learn and cr
 
 ## Related Project
 
-- [`Pijar Food Web Demo`](https://pijar-food.vercel.app/)
-- [`Pijar Food Web Frontend Repository`](https://github.com/muhabby/FE-Pijar-Food)
-- [`Pijar Food Backend Repository`](https://github.com/muhabby/BE-Pijar-Food)
+- [Pijar Food Web Demo](https://pijar-food.vercel.app/)
+- [Pijar Food Web Frontend Repository](https://github.com/muhabby/FE-Pijar-Food)
+- [Pijar Food Backend Repository](https://github.com/muhabby/BE-Pijar-Food)
 
 ## Contact
 
